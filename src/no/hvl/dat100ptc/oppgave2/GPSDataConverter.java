@@ -13,8 +13,7 @@ public class GPSDataConverter {
 		int secs;
 		int hr, min, sec;
 		
-		// TODO
-		throw new UnsupportedOperationException(TODO.method());
+		int dmamda = Integer.parseInt(timestr);
 		
 	}
 
