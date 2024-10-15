@@ -17,9 +17,14 @@ public class GPSDataConverter {
 		timestr = timestr.replaceAll(".000Z", "");
 		String [] timeParts = timestr.split(":");
 
-		int toInt = Integer.parseInt(timestr);
+		hr = Integer.parseInt(timeParts[0]);
+		min = Integer.parseInt(timeParts[1]);
+		sec = Integer.parseInt(timeParts[2]);
 		
+		secs = (hr*3600) + (min*60) + sec;
 		
+		//return secs;
+		System.out.print(secs);
 	}
 
 	public static GPSPoint convert(String timeStr, String latitudeStr, String longitudeStr, String elevationStr) {
