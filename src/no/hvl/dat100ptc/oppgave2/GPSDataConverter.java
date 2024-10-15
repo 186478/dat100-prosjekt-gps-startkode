@@ -27,20 +27,15 @@ public class GPSDataConverter {
 	}
 
 	public static GPSPoint convert(String timeStr, String latitudeStr, String longitudeStr, String elevationStr) {
-
-		GPSPoint gpspoint;
 		
 		int time = toSeconds(timeStr);
 		double latitude = Double.parseDouble(latitudeStr);
 		double longitude = Double.parseDouble(longitudeStr);
 		double elevation = Double.parseDouble(elevationStr);
 
-		return time;
-		return latitude;
-		return longitude;
-		return elevation;
-	
+		GPSPoint gpspoint = new GPSPoint(time, latitude, longitude, elevation);
 		
+		return gpspoint;
 	}
 	
 }
