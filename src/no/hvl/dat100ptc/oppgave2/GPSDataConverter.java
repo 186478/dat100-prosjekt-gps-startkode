@@ -13,7 +13,9 @@ public class GPSDataConverter {
 		int secs;
 		int hr, min, sec;
 		
-		int dmamda = Integer.parseInt(timestr);
+		timeString = timeString.replaceAll("2017-08-13T", "");
+		timeString = timeString.replaceAll(".000Z", "");
+		String [] timeParts = timeString.split(":");
 		
 	}
 
