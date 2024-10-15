@@ -16,6 +16,9 @@ public class GPSDataConverter {
 		timeString = timeString.replaceAll("2017-08-13T", "");
 		timeString = timeString.replaceAll(".000Z", "");
 		String [] timeParts = timeString.split(":");
+
+		int toInt = Integer.parseInt(timestr);
+		
 		
 	}
 
