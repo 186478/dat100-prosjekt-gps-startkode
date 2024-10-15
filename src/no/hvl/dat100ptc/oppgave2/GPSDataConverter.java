@@ -13,9 +13,8 @@ public class GPSDataConverter {
 		int secs;
 		int hr, min, sec;
 		
-		timestr = timestr.replaceAll("2017-08-13T", "");
-		timestr = timestr.replaceAll(".000Z", "");
-		String [] timeParts = timestr.split(":");
+		String timestring = timestr.substring(timestr.indexOf("T") + 1, timestr.indexOf("."));
+		String [] timeParts = timestring.split(":");
 
 		hr = Integer.parseInt(timeParts[0]);
 		min = Integer.parseInt(timeParts[1]);
@@ -23,8 +22,8 @@ public class GPSDataConverter {
 		
 		secs = (hr*3600) + (min*60) + sec;
 		
-		//return secs;
-		System.out.print(secs);
+		return secs;
+		
 	}
 
 	public static GPSPoint convert(String timeStr, String latitudeStr, String longitudeStr, String elevationStr) {
