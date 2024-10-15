@@ -16,9 +16,10 @@ public class GPSPoint {
 		this.longitude = longitude;
 		this.elevation = elevation;
 		
+		
+		
 	}
 
-	// TODO - get/set metoder
 	public int getTime() {
 		
 		return time;
@@ -68,9 +69,10 @@ public class GPSPoint {
 	}
 	
 	public String toString() {
-		
 	
-		return time + " (" + latitude + "," + longitude + ") " +  elevation + "\n";		
+	
+		return time + " (" + latitude + "," + longitude + ") " + elevation + "\n";		
+		String str;
 		
 		
 	}
