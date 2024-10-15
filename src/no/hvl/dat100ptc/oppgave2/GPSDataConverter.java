@@ -13,7 +13,9 @@ public class GPSDataConverter {
 		int secs;
 		int hr, min, sec;
 		
-		int dmamda = Integer.parseInt(timestr);
+		int toInt = Integer.parseInt(timestr);
+		
+		toInt
 		
 	}
 
