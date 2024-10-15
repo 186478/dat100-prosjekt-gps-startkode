@@ -12,7 +12,7 @@ public class Main {
 		point.setLongitude(2.0);
 		point.setElevation(5.0);
 		
-		System.out.println("Tid: " + point.getTime() + "sekunder");
+		System.out.println("Tid: " + point.getTime() + "sewkunder");
 		System.out.println("høydegrad: " + point.getLatitude());
 		System.out.println("lengdegrad: " + point.getLongitude());
 		System.out.println("høyde: " + point.getElevation() + "meter");
@@ -20,5 +20,6 @@ public class Main {
 		System.out.println(point.toString());
 		
 	}
+	
 
 }
