@@ -115,10 +115,17 @@ public class GPSUtils {
 
 		String timestr;
 		String TIMESEP = ":";
-
-		throw new UnsupportedOperationException(TODO.method());
 		
-		// TODO 
+		int hours = secs / 3600;
+	    int minutes = (secs % 3600) / 60;
+	    int seconds = secs % 60;
+
+	    
+	    timestr = String.format("%2s%02d%s%02d%s%02d", "", hours, TIMESEP, minutes, TIMESEP, seconds);
+
+	    return timestr;
+
+		
 		
 	}
 	
@@ -126,12 +133,10 @@ public class GPSUtils {
 
 	public static String formatDouble(double d) {
 
-		String str;
-
 		
-		throw new UnsupportedOperationException(TODO.method());
+		 String str = String.format("%" + TEXTWIDTH + ".2f", d);
+		 return str;
 		
-		// TODO
-		
+	
 	}
 }
