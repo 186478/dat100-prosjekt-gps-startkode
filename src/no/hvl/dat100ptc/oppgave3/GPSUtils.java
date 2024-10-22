@@ -102,12 +102,14 @@ public class GPSUtils {
 	
 	public static double speed(GPSPoint gpspoint1, GPSPoint gpspoint2) {
 
-		int secs;
-		double speed;
+		int time1 = gpspoint1.getTime();
+		int time2 = gpspoint2.getTime();
+		int secs = time2 - time1;
+		double distance = distance(gpspoint1, gpspoint2);
 		
-		throw new UnsupportedOperationException(TODO.method());
+		double speed = distance / secs;
 		
-		// TODO
+		return speed;
 
 	}
 
