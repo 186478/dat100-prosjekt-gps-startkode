@@ -65,32 +65,37 @@ public class GPSUtils {
 
 	public static double distance(GPSPoint gpspoint1, GPSPoint gpspoint2) {
 
-		double d;
-		double latitude1, longitude1, latitude2, longitude2;
-
-		double latitude1R = Math.toRadians(latitude1);
-		double latitude2R = Math.toRadians(latitude2);
-		double longitude1R = Math.toRadians(longitude1);
-		double longitude2R = Math.toRadians(longitude2);
 		
-		double
+		double latitude1 = gpspoint1.getLatitude();
+		double longitude1 = gpspoint1.getLongitude();
+		double latitude2 = gpspoint2.getLatitude();
+		double longitude2 = gpspoint2.getLongitude();
+
+		double latitude1Rad = Math.toRadians(latitude1);
+		double latitude2Rad = Math.toRadians(latitude2);
+		double deltaPhi = Math.toRadians(latitude2 - latitude1);
+		double deltaLambda = Math.toRadians(longitude2 - longitude1);
+		
+		double a = compute_a(latitude1Rad, latitude2Rad, deltaPhi, deltaLambda);
+		
+		double c = compute_c(a);
+				
+		double d = R * c;
+		return d;
 	}
 	
 	private static double compute_a(double phi1, double phi2, double deltaphi, double deltadelta) {
 	
-		throw new UnsupportedOperationException(TODO.method());
+		double a = Math.pow(Math.sin(deltaphi /2), 2) 
+				+ Math.cos(phi1) * Math.cos(phi2) * Math.pow(Math.sin(deltadelta/2), 2);
+		return a;
 		
-		// TODO 
-
 	}
 
 	private static double compute_c(double a) {
 
-		
-		throw new UnsupportedOperationException(TODO.method());
-		
-		
-		// TODO 
+		double c = 2 * Math.atan2(Math.sqrt(a),  Math.sqrt(1 - a));
+		return c;
 
 	}
 
