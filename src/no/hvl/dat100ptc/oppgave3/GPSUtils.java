@@ -68,9 +68,12 @@ public class GPSUtils {
 		double d;
 		double latitude1, longitude1, latitude2, longitude2;
 
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO 
+		double latitude1R = Math.toRadians(latitude1);
+		double latitude2R = Math.toRadians(latitude2);
+		double longitude1R = Math.toRadians(longitude1);
+		double longitude2R = Math.toRadians(longitude2);
+		
+		double
 	}
 	
 	private static double compute_a(double phi1, double phi2, double deltaphi, double deltadelta) {
